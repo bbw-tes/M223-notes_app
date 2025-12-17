@@ -18,7 +18,7 @@ public class ExpenseService {
     }
 
     public Expense findById(Long id) {
-        repo.findById(id);
+        return repo.findById(id);
     }
 
     @Transactional
@@ -29,7 +29,7 @@ public class ExpenseService {
 
     @Transactional
     public void deleteById(Long id) {
-        repo.deleteById(id;)
+        repo.deleteById(id);
     }
 
 }

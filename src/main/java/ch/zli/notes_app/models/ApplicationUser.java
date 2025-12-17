@@ -1,5 +1,6 @@
 package ch.zli.notes_app.models;
 
+import java.util.List;
 import jakarta.persistence.*;
 import ch.zli.notes_app.models.UserRole;
 
@@ -18,6 +19,9 @@ public class ApplicationUser {
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
+
+    @OneToMany(mappedBy = "owner")
+    List<Expense> expenses;
 
     // getter and setter
     public Long getId() {return id;}
